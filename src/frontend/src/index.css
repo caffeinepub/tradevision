@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.375rem;
+    --background: 0.1 0.015 250;
+    --foreground: 0.93 0.02 240;
+    --card: 0.12 0.018 245;
+    --card-foreground: 0.93 0.02 240;
+    --popover: 0.14 0.018 245;
+    --popover-foreground: 0.93 0.02 240;
+    --primary: 0.72 0.14 184;
+    --primary-foreground: 0.1 0.015 250;
+    --secondary: 0.19 0.025 240;
+    --secondary-foreground: 0.93 0.02 240;
+    --muted: 0.16 0.02 242;
+    --muted-foreground: 0.68 0.02 240;
+    --accent: 0.19 0.025 240;
+    --accent-foreground: 0.72 0.14 184;
+    --destructive: 0.65 0.22 28;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.19 0.025 240;
+    --input: 0.16 0.02 242;
+    --ring: 0.72 0.14 184;
+    --chart-1: 0.72 0.14 184;
+    --chart-2: 0.76 0.18 148;
+    --chart-3: 0.65 0.22 28;
+    --chart-4: 0.82 0.18 80;
+    --chart-5: 0.7 0.2 300;
+    --sidebar: 0.12 0.018 245;
+    --sidebar-foreground: 0.93 0.02 240;
+    --sidebar-primary: 0.72 0.14 184;
+    --sidebar-primary-foreground: 0.1 0.015 250;
+    --sidebar-accent: 0.16 0.02 242;
+    --sidebar-accent-foreground: 0.72 0.14 184;
+    --sidebar-border: 0.19 0.025 240;
+    --sidebar-ring: 0.72 0.14 184;
+    --buy: 0.76 0.18 148;
+    --sell: 0.65 0.22 28;
+    --teal: 0.72 0.14 184;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Satoshi", "Inter", system-ui, sans-serif;
+    font-size: 13px;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(var(--border));
+    border-radius: 2px;
+  }
+}
